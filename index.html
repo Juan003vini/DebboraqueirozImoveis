@@ -4,12 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Terreno BR-153 Goiânia</title>
-<meta name="description" content="Terreno de 11.978 m² às margens da BR-153, ao lado do Aeroporto Santa Genoveva em Goiânia. Documentação regular. Débbora Queiroz Imóveis.">
+<meta name="description" content="Terreno de 11.978 m² às margens da BR-153, ao lado do Aeroporto Santa Genoveva em Goiânia. Documentação regular. DQ Business Consultoria Imobiliária.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Terreno de 11.978 m² na BR-153 · Goiânia">
-<meta property="og:description" content="Terreno de 11.978 m² às margens da BR-153, ao lado do Aeroporto Santa Genoveva em Goiânia. Documentação regular. Débbora Queiroz Imóveis.">
+<meta property="og:description" content="Terreno de 11.978 m² às margens da BR-153, ao lado do Aeroporto Santa Genoveva em Goiânia. Documentação regular. DQ Business Consultoria Imobiliária.">
 <meta property="og:image" content="assets/frame_13.jpg">
 <meta name="theme-color" content="#071318">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -168,7 +172,7 @@ section.block{padding-block:88px;border-bottom:1px solid var(--line)}
 .broker-copy{display:flex;flex-direction:column;gap:18px;min-width:0}
 .broker-copy h2{font-size:clamp(40px,5vw,62px);font-weight:900;text-transform:uppercase}
 .broker-copy p{color:var(--muted);font-size:18px;max-width:34em}
-.creci{font:500 13px/1 var(--f-mono);letter-spacing:.08em;color:var(--muted)}
+.creci{font:500 13px/1.7 var(--f-mono);letter-spacing:.08em;color:var(--muted)}
 @media (max-width:860px){.broker{grid-template-columns:1fr;gap:28px}.portrait{max-width:340px}}
 
 /* Form */
@@ -230,7 +234,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#inicio"><b>Débbora Queiroz</b><span>Imóveis</span></a>
+    <a class="brand" href="#inicio"><b>DQ Business</b><span>Consultoria Imobiliária</span></a>
     <nav aria-label="Seções">
       <a href="#localizacao">Localização</a>
       <a href="#galeria">Imagens</a>
@@ -377,7 +381,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
       <div class="broker-copy">
         <p class="eyebrow">Sua corretora</p>
         <h2>Débbora Queiroz</h2>
-        <p class="creci">Débbora Queiroz Imóveis · CRECI <span id="creci">em breve</span></p>
+        <p class="creci">DQ Business Consultoria Imobiliária<br>CRECI PJ 47.346 · CRECI PF 36.658</p>
         <p>Eu acompanho a negociação dessa área de perto, da primeira visita até a escritura. Me chama no WhatsApp para receber a documentação, agendar uma visita ao terreno ou tirar qualquer dúvida.</p>
         <div class="cta-row">
           <button type="button" class="btn btn-wa js-wa">
@@ -407,7 +411,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Débbora Queiroz Imóveis · Goiânia, GO</span>
+    <span>© 2026 DQ Business Consultoria Imobiliária · CRECI PJ 47.346 · Goiânia, GO</span>
     <span>Valores e disponibilidade sujeitos a alteração sem aviso.</span>
   </div>
 </footer>
@@ -436,7 +440,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 <script>
 /* ===== CONFIGURAÇÃO: troque aqui ===== */
 const WHATSAPP = "5562993904000"; // número da Débbora com DDI + DDD, só dígitos
-const CRECI = "";                 // ex.: "12345-GO"
 /* ===================================== */
 
 const msgPadrao = "Olá, Débbora! Vi o site do terreno de 11.978 m² na BR-153, perto do Aeroporto Santa Genoveva, e quero mais informações.";
@@ -444,7 +447,6 @@ const waLink = t => "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(
 document.querySelectorAll(".js-wa").forEach(a => {
   a.addEventListener("click", e => { e.preventDefault(); abrirQuiz(); });
 });
-if (CRECI) document.getElementById("creci").textContent = CRECI;
 
 // Vídeo + som
 const vid = document.getElementById("vid"), snd = document.getElementById("sound");
