@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Terreno BR-153 Goiânia</title>
+<meta name="description" content="Terreno de 11.978 m² às margens da BR-153, ao lado do Aeroporto Santa Genoveva em Goiânia. Documentação regular. Débbora Queiroz Imóveis.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Terreno de 11.978 m² na BR-153 · Goiânia">
+<meta property="og:description" content="Terreno de 11.978 m² às margens da BR-153, ao lado do Aeroporto Santa Genoveva em Goiânia. Documentação regular. Débbora Queiroz Imóveis.">
+<meta property="og:image" content="assets/frame_13.jpg">
+<meta name="theme-color" content="#071318">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: drone-survey dossier. Dark sky-at-dusk ground, cyan HUD lines from the creative, highway-sign display type. */
+:root{
+  --ink:#071318;        /* page ground */
+  --deep:#0c1f27;       /* raised panels */
+  --line:#1d3a45;       /* hairlines */
+  --fg:#e9f3f5;         /* text */
+  --muted:#8fa9b1;      /* secondary text */
+  --hud:#3fe6ec;        /* cyan survey line */
+  --pin:#ff5a3c;        /* airport pin / signal */
+  --wa:#25d366;         /* WhatsApp */
+  --f-display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --f-body:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--ink);color:var(--fg);font:400 16px/1.6 var(--f-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{display:block}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:20px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:.95;letter-spacing:.005em}
+p{margin:0}
+.eyebrow{font:500 12px/1.4 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--hud)}
+.mono{font-family:var(--f-mono)}
+:focus-visible{outline:2px solid var(--hud);outline-offset:3px}
+
+/* Top bar */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in oklab,var(--ink) 82%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.brand b{font:800 22px/1 var(--f-display);letter-spacing:.03em;text-transform:uppercase}
+.brand span{font:500 10px/1.4 var(--f-mono);letter-spacing:.32em;color:var(--muted);text-transform:uppercase;margin-top:3px}
+.top nav{display:flex;gap:22px;font-size:14px;color:var(--muted)}
+.top nav a{text-decoration:none}
+.top nav a:hover{color:var(--fg)}
+@media (max-width:860px){.top nav{display:none}}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 16px/1 var(--f-body);text-decoration:none;border-radius:6px;padding:16px 22px;border:1px solid transparent;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-wa{background:var(--wa);color:#04210f}
+.btn-ghost{border-color:var(--line);color:var(--fg);background:transparent}
+.btn-ghost:hover{border-color:var(--hud)}
+.btn-sm{padding:10px 14px;font-size:14px}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-bg{position:absolute;inset:0;background:url("assets/frame_13.jpg") center/cover;filter:blur(28px) saturate(1.2);opacity:.28;transform:scale(1.2)}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,var(--ink))}
+.grid-lines{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;opacity:.35;mask-image:radial-gradient(ellipse at 70% 40%,#000 10%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 70% 40%,#000 10%,transparent 70%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding-block:64px 72px}
+.hero-copy{min-width:0;display:flex;flex-direction:column;gap:22px}
+.hero h1{font-size:clamp(48px,7.6vw,104px);overflow-wrap:anywhere;font-weight:900;text-transform:uppercase}
+.hero h1 .area{color:var(--hud);display:block;text-shadow:0 0 30px color-mix(in oklab,var(--hud) 45%,transparent)}
+.hero h1 .area small{font-size:.5em;vertical-align:.7em}
+.lede{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:34em}
+.lede strong{color:var(--fg);font-weight:600}
+.price{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;padding-top:18px;border-top:1px solid var(--line)}
+.price .v{font:800 clamp(34px,4vw,46px)/1 var(--f-display);letter-spacing:.01em}
+.price .m2{font:500 13px/1.4 var(--f-mono);color:var(--muted)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+
+.player{position:relative;justify-self:center;width:100%;max-width:380px;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:var(--deep);box-shadow:0 30px 80px -20px #000,0 0 0 1px var(--line)}
+.player video{width:100%;height:100%;object-fit:cover;display:block}
+.corner{position:absolute;width:26px;height:26px;border:2px solid var(--hud);pointer-events:none;z-index:2}
+.c1{top:10px;left:10px;border-right:0;border-bottom:0}.c2{top:10px;right:10px;border-left:0;border-bottom:0}
+.c3{bottom:10px;left:10px;border-right:0;border-top:0}.c4{bottom:10px;right:10px;border-left:0;border-top:0}
+.rec{position:absolute;top:18px;left:46px;z-index:2;font:500 11px/1 var(--f-mono);letter-spacing:.12em;color:var(--fg);display:flex;align-items:center;gap:6px;text-shadow:0 1px 4px #000}
+.rec i{width:7px;height:7px;border-radius:50%;background:var(--pin);animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.25}}
+.sound{position:absolute;right:16px;bottom:16px;z-index:3;display:flex;align-items:center;gap:8px;background:rgba(4,12,16,.72);color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:10px 14px;font:600 13px/1 var(--f-body);cursor:pointer;backdrop-filter:blur(6px)}
+.sound svg{width:18px;height:18px}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;gap:32px;padding-block:36px 48px}
+  .player{max-width:440px}
+}
+
+/* Spec strip */
+.specs{border-bottom:1px solid var(--line);background:var(--deep)}
+.specs .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.spec{padding:26px 22px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:6px;min-width:0}
+.spec:first-child{border-left:0;padding-left:0}
+.spec .k{font:500 11px/1.3 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.spec .val{font:800 30px/1 var(--f-display);font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.spec .sub{font-size:14px;color:var(--muted)}
+@media (max-width:860px){
+  .specs .wrap{grid-template-columns:1fr 1fr}
+  .spec{padding:20px 16px}
+  .spec:nth-child(odd){border-left:0;padding-left:0}
+  .spec:nth-child(n+3){border-top:1px solid var(--line)}
+}
+
+/* Sections */
+section.block{padding-block:88px;border-bottom:1px solid var(--line)}
+.head{display:flex;flex-direction:column;gap:14px;max-width:760px;margin-bottom:44px}
+.head h2{font-size:clamp(40px,5.4vw,68px);font-weight:900;text-transform:uppercase}
+.head p{color:var(--muted);font-size:18px;max-width:38em}
+@media (max-width:860px){section.block{padding-block:60px}}
+
+/* Pillars */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.pillar{background:var(--ink);padding:30px 26px 32px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.pillar svg{width:34px;height:34px;color:var(--hud)}
+.pillar h3{font-size:30px;font-weight:800;text-transform:uppercase}
+.pillar p{color:var(--muted)}
+@media (max-width:860px){.pillars{grid-template-columns:1fr}}
+
+/* Location */
+.loc{display:grid;grid-template-columns:1.25fr 1fr;gap:44px;align-items:start}
+.mapframe{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line);min-width:0}
+.mapframe img{width:100%;height:auto}
+.mapframe figcaption{position:absolute;left:12px;bottom:12px;font:500 11px/1.3 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;background:rgba(4,12,16,.8);color:#fff;padding:7px 10px;border-radius:4px}
+.landmarks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.landmarks li{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:18px 0;border-top:1px solid var(--line);min-width:0}
+.landmarks li:last-child{border-bottom:1px solid var(--line)}
+.landmarks .ic{width:40px;height:40px;border-radius:8px;display:grid;place-items:center;background:var(--deep);color:var(--hud)}
+.landmarks .ic.pin{color:var(--pin)}
+.landmarks .ic svg{width:20px;height:20px}
+.landmarks b{display:block;font-weight:600;font-size:17px}
+.landmarks span{color:var(--muted);font-size:15px}
+@media (max-width:860px){.loc{grid-template-columns:1fr;gap:28px}}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gallery button{all:unset;cursor:zoom-in;position:relative;border-radius:8px;overflow:hidden;aspect-ratio:9/14;background:var(--deep);border:1px solid var(--line)}
+.gallery button:focus-visible{outline:2px solid var(--hud);outline-offset:3px}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gallery button:hover img{transform:scale(1.04)}
+.gallery .tag{position:absolute;left:10px;top:10px;font:500 10px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;background:rgba(4,12,16,.78);color:#fff;padding:6px 8px;border-radius:3px}
+@media (max-width:860px){.gallery{grid-template-columns:1fr 1fr}}
+.lightbox{position:fixed;inset:0;z-index:50;background:rgba(2,8,10,.94);display:grid;place-items:center;padding:24px}
+.lightbox img{max-width:100%;max-height:88vh;border-radius:8px}
+.lightbox button{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));right:16px;background:var(--deep);color:var(--fg);border:1px solid var(--line);border-radius:999px;width:44px;height:44px;font-size:22px;cursor:pointer}
+
+/* Uses */
+.uses{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.use{border:1px solid var(--line);border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.use h3{font-size:24px;font-weight:800;text-transform:uppercase}
+.use p{color:var(--muted);font-size:15px}
+.note{margin-top:22px;font:400 13px/1.5 var(--f-mono);color:var(--muted)}
+@media (max-width:860px){.uses{grid-template-columns:1fr}}
+
+/* Broker */
+.broker{display:grid;grid-template-columns:320px 1fr;gap:52px;align-items:center}
+.portrait{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/5;max-width:100%;border:1px solid var(--line)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.broker-copy{display:flex;flex-direction:column;gap:18px;min-width:0}
+.broker-copy h2{font-size:clamp(40px,5vw,62px);font-weight:900;text-transform:uppercase}
+.broker-copy p{color:var(--muted);font-size:18px;max-width:34em}
+.creci{font:500 13px/1 var(--f-mono);letter-spacing:.08em;color:var(--muted)}
+@media (max-width:860px){.broker{grid-template-columns:1fr;gap:28px}.portrait{max-width:340px}}
+
+/* Form */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+form{display:flex;flex-direction:column;gap:16px;background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:28px;min-width:0}
+label{display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:500}
+input,select{font:400 16px/1.3 var(--f-body);color:var(--fg);background:var(--ink);border:1px solid var(--line);border-radius:6px;padding:14px;width:100%}
+input:focus,select:focus{outline:none;border-color:var(--hud)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips input{position:absolute;opacity:0;width:1px;height:1px}
+.chips label{flex-direction:row;cursor:pointer;border:1px solid var(--line);border-radius:999px;padding:9px 14px;font-weight:500;background:var(--ink)}
+.chips input:checked+label{border-color:var(--hud);color:var(--hud)}
+.chips input:focus-visible+label{outline:2px solid var(--hud);outline-offset:2px}
+fieldset{border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+legend{font-size:14px;font-weight:500;margin-bottom:9px}
+.err{color:var(--pin);font-size:14px}
+@media (max-width:860px){.contact{grid-template-columns:1fr;gap:32px}form{padding:20px}}
+
+/* Qualificação (modal) */
+.qz{position:fixed;inset:0;z-index:60;background:rgba(2,8,10,.86);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:grid;place-items:center;padding:20px}
+.qz-panel{position:relative;width:100%;max-width:540px;max-height:calc(100dvh - 40px);overflow:auto;background:var(--deep);border:1px solid var(--line);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:20px}
+.qz-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.qz-step{font:500 12px/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--hud)}
+.qz-x{background:transparent;border:1px solid var(--line);color:var(--fg);border-radius:999px;width:38px;height:38px;font-size:20px;cursor:pointer;flex:none}
+.qz-bar{height:3px;background:var(--line);border-radius:3px;overflow:hidden}
+.qz-bar i{display:block;height:100%;width:0;background:var(--hud);transition:width .3s}
+.qz h3{font-size:clamp(30px,5vw,40px);font-weight:900;text-transform:uppercase}
+.qz-hint{color:var(--muted);font-size:15px;margin-top:-8px}
+.qz-opts{display:flex;flex-direction:column;gap:10px}
+.qz-opt{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:16px 18px;border:1px solid var(--line);border-radius:8px;background:var(--ink);font:500 16px/1.3 var(--f-body);color:var(--fg);transition:border-color .15s}
+.qz-opt:hover{border-color:var(--hud)}
+.qz-opt:focus-visible{outline:2px solid var(--hud);outline-offset:2px}
+.qz-opt[aria-pressed="true"]{border-color:var(--hud);color:var(--hud)}
+.qz-opt::after{content:"→";color:var(--muted)}
+.qz-back{all:unset;cursor:pointer;color:var(--muted);font-size:14px;align-self:flex-start}
+.qz-back:hover{color:var(--fg)}
+.qz-back:focus-visible{outline:2px solid var(--hud);outline-offset:3px}
+.qz-sum{font:400 13px/1.7 var(--f-mono);color:var(--muted);border:1px dashed var(--line);border-radius:8px;padding:12px 14px}
+.qz-sum b{color:var(--fg);font-weight:500}
+.qz-fields{display:flex;flex-direction:column;gap:14px}
+.qz form{background:none;border:0;padding:0;border-radius:0}
+@media (max-width:560px){.qz{padding:0;place-items:end stretch}.qz-panel{max-width:none;max-height:92dvh;border-radius:16px 16px 0 0;padding:22px 18px calc(22px + env(safe-area-inset-bottom,0px))}}
+
+footer{padding-block:40px 120px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+
+/* Mobile sticky CTA */
+.dock{display:none}
+@media (max-width:860px){
+  .dock{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;gap:10px;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:color-mix(in oklab,var(--ink) 90%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);align-items:center}
+  .dock .btn{flex:1}
+  .dock .p{font:800 22px/1 var(--f-display);white-space:nowrap}
+  .dock .p small{display:block;font:500 10px/1.3 var(--f-mono);color:var(--muted);letter-spacing:.1em}
+}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><b>Débbora Queiroz</b><span>Imóveis</span></a>
+    <nav aria-label="Seções">
+      <a href="#localizacao">Localização</a>
+      <a href="#galeria">Imagens</a>
+      <a href="#potencial">Potencial</a>
+      <a href="#corretora">Corretora</a>
+    </nav>
+    <button type="button" class="btn btn-wa btn-sm js-wa">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>
+      WhatsApp
+    </button>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">Goiânia · GO &nbsp;/&nbsp; Ao lado do Aeroporto Santa Genoveva</p>
+        <h1>Área estratégica na BR-153 <span class="area">11.978<small>m²</small></span></h1>
+        <p class="lede">Quase 12 mil metros com <strong>frente para a BR-153</strong>, numa região industrial consolidada e com <strong>documentação regular</strong>. Pronta para o seu galpão, centro de distribuição ou investimento.</p>
+        <div class="price">
+          <span class="v">R$ 10.000.000</span>
+          <span class="m2">≈ R$ 835 / m²</span>
+        </div>
+        <div class="cta-row">
+          <button type="button" class="btn btn-wa js-wa">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>
+            Falar com a corretora
+          </button>
+          <a class="btn btn-ghost" href="#localizacao">Ver localização</a>
+        </div>
+      </div>
+
+      <div class="player">
+        <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+        <span class="rec"><i></i>VOO DE DRONE</span>
+        <video id="vid" src="assets/terreno.mp4" poster="assets/frame_5.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Vídeo aéreo do terreno às margens da BR-153"></video>
+        <button class="sound" id="sound" type="button" aria-pressed="false">
+          <svg id="ic-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5Z"/><path d="m23 9-6 6M17 9l6 6"/></svg>
+          <svg id="ic-on" hidden viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg>
+          <span id="sound-label">Ouvir a Débbora</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="specs">
+    <div class="wrap">
+      <div class="spec"><span class="k">Área total</span><span class="val">11.978 m²</span><span class="sub">Terreno retangular</span></div>
+      <div class="spec"><span class="k">Acesso</span><span class="val">BR-153</span><span class="sub">Frente para a rodovia</span></div>
+      <div class="spec"><span class="k">Vizinho</span><span class="val">Aeroporto</span><span class="sub">Santa Genoveva</span></div>
+      <div class="spec"><span class="k">Documentação</span><span class="val">Regular</span><span class="sub">Segurança jurídica</span></div>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Por que essa área</p>
+        <h2>Localização, segurança e potencial de uso</h2>
+        <p>Quando o assunto é investimento imobiliário, são essas três coisas que definem o valor de um terreno. Essa área entrega as três.</p>
+      </div>
+      <div class="pillars">
+        <article class="pillar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <h3>Localização</h3>
+          <p>Às margens da BR-153, principal eixo rodoviário de Goiânia, e a poucos passos do Aeroporto Santa Genoveva. Visibilidade para quem passa e saída rápida para o país inteiro.</p>
+        </article>
+        <article class="pillar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+          <h3>Segurança jurídica</h3>
+          <p>Documentação regular e pronta para análise. Você negocia sabendo exatamente o que está comprando.</p>
+        </article>
+        <article class="pillar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/></svg>
+          <h3>Potencial de uso</h3>
+          <p>Quase 12 mil m² de área livre numa região industrial já consolidada, cercada por galpões, indústrias e empresas de grande porte.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="localizacao">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Localização</p>
+        <h2>No meio do que já funciona</h2>
+        <p>Uma região consolidada, com indústria dos dois lados da rodovia e o aeroporto logo atrás.</p>
+      </div>
+      <div class="loc">
+        <figure class="mapframe" style="margin:0">
+          <img src="assets/mapa.jpg" alt="Vista de satélite do terreno destacado em vermelho, de frente para a BR-153, com Halex Istar e Goinfra do outro lado da rodovia" width="486" height="344" loading="lazy">
+          <figcaption>Terreno em destaque</figcaption>
+        </figure>
+        <ul class="landmarks">
+          <li><span class="ic pin"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5Z"/></svg></span><div><b>Aeroporto Santa Genoveva</b><span>Aeroporto internacional de Goiânia, vizinho da área</span></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 21 9 3M20 21 15 3M12 6v2M12 11v2M12 16v3"/></svg></span><div><b>BR-153</b><span>Frente direta para a rodovia, com acesso e visibilidade</span></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 21V9l6 4V9l6 4V5h6v16H3Z"/></svg></span><div><b>Halex Istar</b><span>Indústria farmacêutica do outro lado da BR</span></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 7h6M9 11h6M9 15h6"/></svg></span><div><b>Goinfra</b><span>Agência Goiana de Infraestrutura e Transportes</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="galeria">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Imagens</p>
+        <h2>Vista de drone</h2>
+      </div>
+      <div class="gallery">
+        <button type="button" data-src="assets/frame_5.jpg"><img src="assets/frame_5.jpg" alt="Terreno contornado em ciano, visto de cima, ao lado de um galpão" loading="lazy"><span class="tag">Perímetro</span></button>
+        <button type="button" data-src="assets/frame_13.jpg"><img src="assets/frame_13.jpg" alt="Terreno com o Aeroporto Santa Genoveva ao fundo" loading="lazy"><span class="tag">Aeroporto</span></button>
+        <button type="button" data-src="assets/frame_17.jpg"><img src="assets/frame_17.jpg" alt="Vista ampla do terreno e da BR-153 em Goiânia" loading="lazy"><span class="tag">BR-153</span></button>
+        <button type="button" data-src="assets/frame_25.jpg"><img src="assets/frame_25.jpg" alt="Terreno com a metragem 11.978 m² em destaque" loading="lazy"><span class="tag">11.978 m²</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="potencial">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Potencial de uso</p>
+        <h2>O que cabe aqui</h2>
+        <p>Área grande, plana e de frente para a rodovia. Algumas possibilidades para quem procura espaço em Goiânia.</p>
+      </div>
+      <div class="uses">
+        <div class="use"><h3>Galpão logístico</h3><p>Rodovia na porta e aeroporto ao lado para quem movimenta carga.</p></div>
+        <div class="use"><h3>Centro de distribuição</h3><p>Saída direta pela BR-153 para o resto de Goiás e do país.</p></div>
+        <div class="use"><h3>Indústria</h3><p>Vizinhança industrial já estabelecida, com empresas de grande porte.</p></div>
+        <div class="use"><h3>Showroom e comércio</h3><p>Fachada visível para todo o fluxo diário da rodovia.</p></div>
+        <div class="use"><h3>Sede de empresa</h3><p>Endereço estratégico perto do aeroporto, fácil para clientes e equipe.</p></div>
+        <div class="use"><h3>Investimento</h3><p>Terra bem localizada numa região que só se valoriza.</p></div>
+      </div>
+      <p class="note">Os usos permitidos seguem a legislação municipal de Goiânia. Peça à corretora as informações de zoneamento.</p>
+    </div>
+  </section>
+
+  <section class="block" id="corretora">
+    <div class="wrap broker">
+      <div class="portrait"><img src="assets/debbora.jpg" alt="Débbora Queiroz, corretora de imóveis" loading="lazy"></div>
+      <div class="broker-copy">
+        <p class="eyebrow">Sua corretora</p>
+        <h2>Débbora Queiroz</h2>
+        <p class="creci">Débbora Queiroz Imóveis · CRECI <span id="creci">em breve</span></p>
+        <p>Eu acompanho a negociação dessa área de perto, da primeira visita até a escritura. Me chama no WhatsApp para receber a documentação, agendar uma visita ao terreno ou tirar qualquer dúvida.</p>
+        <div class="cta-row">
+          <button type="button" class="btn btn-wa js-wa">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>
+            Chamar no WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="contato">
+    <div class="wrap contact">
+      <div class="head" style="margin:0">
+        <p class="eyebrow">Receba as informações</p>
+        <h2>Quer a documentação completa?</h2>
+        <p>Responda 4 perguntas e sua mensagem chega pronta no WhatsApp da Débbora. Ela te responde com matrícula, medidas e condições de pagamento.</p>
+      </div>
+      <div class="lead-box" style="display:flex;flex-direction:column;gap:16px;background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:28px;min-width:0">
+        <p class="eyebrow">4 perguntas rápidas</p>
+        <p style="color:var(--muted)">Perfil, finalidade, forma de pagamento e prazo. Leva menos de um minuto e a Débbora já te responde com o que importa para o seu caso.</p>
+        <button class="btn btn-wa js-wa" type="button">Começar</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Débbora Queiroz Imóveis · Goiânia, GO</span>
+    <span>Valores e disponibilidade sujeitos a alteração sem aviso.</span>
+  </div>
+</footer>
+
+<div class="dock">
+  <span class="p">R$ 10 mi<small>11.978 m²</small></span>
+  <button type="button" class="btn btn-wa js-wa">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>
+    Falar no WhatsApp
+  </button>
+</div>
+
+<div class="qz" id="qz" hidden role="dialog" aria-modal="true" aria-labelledby="qz-title">
+  <div class="qz-panel">
+    <div class="qz-top"><span class="qz-step" id="qz-step">Etapa 1 de 5</span><button type="button" class="qz-x" id="qz-x" aria-label="Fechar">×</button></div>
+    <div class="qz-bar" aria-hidden="true"><i id="qz-bar"></i></div>
+    <div id="qz-body" style="display:flex;flex-direction:column;gap:20px"></div>
+  </div>
+</div>
+
+<div class="lightbox" id="lb" hidden role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+  <img id="lb-img" alt="">
+  <button type="button" id="lb-close" aria-label="Fechar">×</button>
+</div>
+
+<script>
+/* ===== CONFIGURAÇÃO: troque aqui ===== */
+const WHATSAPP = "5562993904000"; // número da Débbora com DDI + DDD, só dígitos
+const CRECI = "";                 // ex.: "12345-GO"
+/* ===================================== */
+
+const msgPadrao = "Olá, Débbora! Vi o site do terreno de 11.978 m² na BR-153, perto do Aeroporto Santa Genoveva, e quero mais informações.";
+const waLink = t => "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(t);
+document.querySelectorAll(".js-wa").forEach(a => {
+  a.addEventListener("click", e => { e.preventDefault(); abrirQuiz(); });
+});
+if (CRECI) document.getElementById("creci").textContent = CRECI;
+
+// Vídeo + som
+const vid = document.getElementById("vid"), snd = document.getElementById("sound");
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) vid.removeAttribute("autoplay"), vid.pause();
+snd.addEventListener("click", () => {
+  const ligar = vid.muted;
+  vid.muted = !ligar;
+  if (ligar) { vid.currentTime = 0; vid.play().catch(()=>{}); }
+  snd.setAttribute("aria-pressed", String(ligar));
+  document.getElementById("ic-on").hidden = !ligar;
+  document.getElementById("ic-off").hidden = ligar;
+  document.getElementById("sound-label").textContent = ligar ? "Som ligado" : "Ouvir a Débbora";
+});
+
+// Galeria
+const lb = document.getElementById("lb"), lbImg = document.getElementById("lb-img");
+document.querySelectorAll(".gallery button").forEach(b => b.addEventListener("click", () => {
+  lbImg.src = b.dataset.src; lbImg.alt = b.querySelector("img").alt; lb.hidden = false; document.getElementById("lb-close").focus();
+}));
+const fecha = () => { lb.hidden = true; };
+document.getElementById("lb-close").addEventListener("click", fecha);
+lb.addEventListener("click", e => { if (e.target === lb) fecha(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") fecha(); });
+
+// Qualificação -> WhatsApp
+const PERGUNTAS = [
+  { k:"perfil", t:"Quem é você?", o:["Empresário buscando área para minha empresa","Investidor","Corretor ou representante de cliente","Outro"] },
+  { k:"finalidade", t:"O que pretende fazer na área?", o:["Galpão ou centro de distribuição","Indústria","Comércio ou showroom","Investimento / renda","Ainda não defini"] },
+  { k:"pagamento", t:"Como pretende pagar?", h:"O valor pedido é R$ 10.000.000.", o:["À vista","Entrada + parcelas","Permuta (parcial ou total)","Ainda vou avaliar"] },
+  { k:"prazo", t:"Quando pretende fechar negócio?", o:["Nos próximos 30 dias","Em até 3 meses","Em até 6 meses","Só estou pesquisando"] },
+];
+const ROTULO = { perfil:"Perfil", finalidade:"Finalidade", pagamento:"Pagamento", prazo:"Prazo" };
+const qz = document.getElementById("qz"), qzBody = document.getElementById("qz-body");
+let passo = 0, resp = {}, ultimoFoco = null;
+const TOTAL = PERGUNTAS.length + 1;
+
+function abrirQuiz(){ ultimoFoco = document.activeElement; passo = 0; resp = {}; qz.hidden = false; document.body.style.overflow = "hidden"; render(); }
+function fecharQuiz(){ qz.hidden = true; document.body.style.overflow = ""; if (ultimoFoco) ultimoFoco.focus(); }
+document.getElementById("qz-x").addEventListener("click", fecharQuiz);
+qz.addEventListener("click", e => { if (e.target === qz) fecharQuiz(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !qz.hidden) fecharQuiz(); });
+
+const esc = t => t.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function render(){
+  document.getElementById("qz-step").textContent = passo < TOTAL ? `Etapa ${passo+1} de ${TOTAL}` : "Pronto";
+  document.getElementById("qz-bar").style.width = (Math.min(passo, TOTAL) / TOTAL * 100) + "%";
+  const voltar = passo > 0 && passo < TOTAL + 1 ? '<button type="button" class="qz-back" id="qz-back">← Voltar</button>' : "";
+  if (passo < PERGUNTAS.length){
+    const q = PERGUNTAS[passo];
+    qzBody.innerHTML = `<h3 id="qz-title">${q.t}</h3>${q.h ? `<p class="qz-hint">${q.h}</p>` : ""}
+      <div class="qz-opts">${q.o.map(o => `<button type="button" class="qz-opt" aria-pressed="${resp[q.k]===o}">${o}</button>`).join("")}</div>${voltar}`;
+    qzBody.querySelectorAll(".qz-opt").forEach(b => b.addEventListener("click", () => { resp[q.k] = b.textContent; passo++; render(); }));
+  } else if (passo === PERGUNTAS.length){
+    qzBody.innerHTML = `<h3 id="qz-title">Para quem a Débbora vai responder?</h3>
+      <div class="qz-sum">${PERGUNTAS.map(q => `${ROTULO[q.k]}: <b>${esc(resp[q.k])}</b>`).join("<br>")}</div>
+      <form id="qz-form" class="qz-fields" novalidate>
+        <label for="qz-nome">Seu nome<input id="qz-nome" autocomplete="name" placeholder="Como você se chama?" value="${esc(resp.nome||"")}"></label>
+        <label for="qz-emp">Empresa (opcional)<input id="qz-emp" autocomplete="organization" placeholder="Nome da empresa" value="${esc(resp.empresa||"")}"></label>
+        <p class="err" id="qz-err" hidden>Escreva seu nome para continuar.</p>
+        <button class="btn btn-wa" type="submit">Enviar para a Débbora no WhatsApp</button>
+      </form>${voltar}`;
+    document.getElementById("qz-form").addEventListener("submit", enviar);
+  } else {
+    qzBody.innerHTML = `<h3 id="qz-title">Sua mensagem está pronta</h3>
+      <p class="qz-hint" style="margin:0">Abrimos o WhatsApp da Débbora com suas respostas. Confira e toque em enviar por lá. Se o WhatsApp não abriu, use o botão abaixo.</p>
+      <a class="btn btn-wa" id="qz-link" target="_blank" rel="noopener" href="${linkFinal}">Abrir WhatsApp</a>`;
+  }
+  const b = document.getElementById("qz-back");
+  if (b) b.addEventListener("click", () => { passo--; render(); });
+  const foco = qzBody.querySelector(".qz-opt, #qz-nome, #qz-link");
+  if (foco) foco.focus({ preventScroll:true });
+}
+
+let linkFinal = "";
+function enviar(e){
+  e.preventDefault();
+  const nome = document.getElementById("qz-nome").value.trim();
+  resp.nome = nome; resp.empresa = document.getElementById("qz-emp").value.trim();
+  if (!nome){ document.getElementById("qz-err").hidden = false; document.getElementById("qz-nome").focus(); return; }
+  const linhas = [
+    "Olá, Débbora! Vim pelo site do terreno de 11.978 m² na BR-153.",
+    "",
+    `Nome: ${nome}`,
+    resp.empresa ? `Empresa: ${resp.empresa}` : null,
+    ...PERGUNTAS.map(q => `${ROTULO[q.k]}: ${resp[q.k]}`),
+    "",
+    "Pode me passar mais informações?"
+  ].filter(l => l !== null);
+  linkFinal = waLink(linhas.join("\n"));
+  const a = document.createElement("a"); a.href = linkFinal; a.target = "_blank"; a.rel = "noopener";
+  document.body.appendChild(a); a.click(); a.remove();
+  passo = TOTAL; render();
+}
+</script>
+
+</body>
+</html>
