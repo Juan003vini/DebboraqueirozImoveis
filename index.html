@@ -444,7 +444,6 @@ const novoId = () => Date.now().toString(36) + Math.random().toString(36).slice(
 const pixel = (ev, dados) => { try { if (window.fbq) fbq("track", ev, dados || {}, { eventID: novoId() }); } catch (e) {} };
 const CONTEUDO = { content_name: "Terreno 11.978 m² BR-153 Goiânia", content_category: "Terreno comercial" };
 let viuVideo = false;
-document.getElementById("btn-corretora").addEventListener("click", () => pixel("Lead", { ...CONTEUDO, origem: "botao_falar_com_corretora" }));
 
 const msgPadrao = "Olá, Débbora! Vi o site do terreno de 11.978 m² na BR-153, perto do Aeroporto Santa Genoveva, e quero mais informações.";
 const waLink = t => "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(t);
