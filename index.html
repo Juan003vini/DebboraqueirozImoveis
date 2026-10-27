@@ -3,6 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KJGX86V6');</script>
+<!-- End Google Tag Manager -->
 <title>Terreno BR-153 Goiânia</title>
 <meta name="description" content="Terreno de 11.978 m² às margens da BR-153, ao lado do Aeroporto Santa Genoveva em Goiânia. Documentação regular. DQ Business Consultoria Imobiliária.">
 <meta property="og:type" content="website">
@@ -233,6 +240,10 @@ fbq('track','PageView');
 <!-- Fim Meta Pixel -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJGX86V6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=3075196425998384&ev=PageView&noscript=1"></noscript>
 
 
@@ -441,7 +452,11 @@ const WHATSAPP = "5562993904000"; // número da Débbora com DDI + DDD, só díg
 
 // Eventos do Pixel (eventID pronto para deduplicar com a API de Conversões)
 const novoId = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
-const pixel = (ev, dados) => { try { if (window.fbq) fbq("track", ev, dados || {}, { eventID: novoId() }); } catch (e) {} };
+const pixel = (ev, dados) => {
+  const id = novoId();
+  try { if (window.fbq) fbq("track", ev, dados || {}, { eventID: id }); } catch (e) {}
+  try { (window.dataLayer = window.dataLayer || []).push({ event: "evento_" + ev.toLowerCase(), event_id: id, ...(dados || {}) }); } catch (e) {}
+};
 const CONTEUDO = { content_name: "Terreno 11.978 m² BR-153 Goiânia", content_category: "Terreno comercial" };
 let viuVideo = false;
 
